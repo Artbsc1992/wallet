@@ -24,10 +24,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_171409) do
   end
 
   create_table "groups", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "name"
     t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "operations", force: :cascade do |t|
@@ -47,5 +49,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_171409) do
 
   add_foreign_key "group_operations", "groups"
   add_foreign_key "group_operations", "operations"
+  add_foreign_key "groups", "users"
   add_foreign_key "operations", "users"
 end
