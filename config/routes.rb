@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "operations#index"
-  after_sign_in_path_for 'devise/confirmations#new'
 end
