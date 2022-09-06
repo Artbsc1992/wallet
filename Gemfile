@@ -73,11 +73,12 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'database_cleaner'
 end
 
 gem 'cancancan', '~> 3.4'
 
 gem 'bullet', '~> 7.0'
+gem 'tailwindcss-rails', '~> 2.0'
