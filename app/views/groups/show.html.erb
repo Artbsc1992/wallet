@@ -4,7 +4,7 @@
   <h2>You have no operations yet</h2>
 <% else %>
   <h2 class="text-2xl font-bold text-gray-700">Total: $<%=@group.total_amount%></h2>
-  <% @operations.each do |operation| %>
+  <% @operations.order(created_at: :desc).each do |operation| %>
     <%= render 'shared/operations', operation: operation %>
   <% end %>
 <% end %>
