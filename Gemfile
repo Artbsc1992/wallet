@@ -81,4 +81,5 @@ end
 gem 'cancancan', '~> 3.4'
 
 gem 'bullet', '~> 7.0'
+gem 'font-awesome-sass', '~> 6.2.0'
 gem 'tailwindcss-rails', '~> 2.0'
