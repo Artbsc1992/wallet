@@ -1,0 +1,12 @@
+<h1>show groups</h1>
+<%= @group.name %>
+<% if @operations.empty? %>
+  <h2>You have no operations yet</h2>
+<% else %>
+  <h2 class="text-2xl font-bold text-gray-700">Total: $<%=@group.total_amount%></h2>
+  <% @operations.order(created_at: :desc).each do |operation| %>
+    <%= render 'shared/operations', operation: operation %>
+  <% end %>
+<% end %>
+
+<%= link_to "Create Operation", new_group_operation_path(@group), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>

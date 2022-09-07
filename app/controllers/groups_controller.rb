@@ -3,6 +3,11 @@ class GroupsController < ApplicationController
     @groups = Group.where(user_id: current_user.id)
   end
 
+  def show
+    @group = Group.find(params[:id])
+    @operations = @group.operations
+  end
+
   def new
     @group = Group.new
   end
@@ -20,7 +25,6 @@ class GroupsController < ApplicationController
   private
 
   def group_params
-    p params
     params.require(:group).permit(:name, :icon)
   end
 end
