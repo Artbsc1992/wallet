@@ -6,9 +6,8 @@ class OperationsController < ApplicationController
   def create
     @operation = Operation.new(operation_params.except(:group_ids))
     @groups = Group.where(id: operation_params[:group_ids])
-    if @groups.first.nil?
-      return
-    end
+    return if @groups.first.nil?
+
     if @operation.save
       @groups.each do |group|
         group.operations << @operation
@@ -22,6 +21,6 @@ class OperationsController < ApplicationController
   private
 
   def operation_params
-    params.require(:operation).permit(:name, :amount, :group_ids => []).merge(user_id: current_user.id)
+    params.require(:operation).permit(:name, :amount, group_ids: []).merge(user_id: current_user.id)
   end
 end
