@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "splash#index"
-  resources :groups, only: [:index, :new, :create] do
-    resources :operations, only: [:index]
+  resources :groups, only: [:index, :show, :new, :create] do
+    resources :operations, only: [:new, :create]
   end
 
   get 'splash/index', to: 'splash#index', as: 'splash'
