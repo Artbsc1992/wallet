@@ -1,1 +1,10 @@
 <h1>show groups</h1>
+<%= @group.name %>
+<% if @operations.empty? %>
+  <h2>You have no operations yet</h2>
+<% else %>
+  <% @operations.each do |operation| %>
+    <%= operation.name %>
+    <%= operation.amount %>
+  <% end %>
+<% end %>

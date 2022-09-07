@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @operations = Operation.where(group_id: @group.id)
+    @operations = @group.operations
   end
 
   def new
