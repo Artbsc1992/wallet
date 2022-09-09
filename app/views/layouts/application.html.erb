@@ -14,6 +14,7 @@
 
   <body class="h-screen">
     <% if user_signed_in? %>
+      <%= link_to "Home", root_path, class: "text-blue-500 hover:text-blue-700" %>
       <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
     <% end %>
     <p class="notice"><%= notice %></p>

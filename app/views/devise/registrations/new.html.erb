@@ -1,4 +1,9 @@
-<h2>Sign up</h2>
+<div class= "w-full h-24 flex justify-around bg-blue-500">
+  <%=link_to :back do%>
+    <i class="fa-solid fa-arrow-left-long"></i>Back
+  <%end%>
+  <h2 class="text-white text-2xl self-center">SignUp</h2>
+</div>
 
 <%= form_for resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false} do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
