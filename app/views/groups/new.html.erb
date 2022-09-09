@@ -11,7 +11,9 @@
       <div class="mb-2">
         <%= f.url_field :icon, autofocus: true, autocomplete: "icon", class: 'mt-3 shadow border-none appearance-none w-full py-5 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline', id: "icon", placeholder: "Add URL" %>
       </div>
-        <%= f.submit "Create Group", class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"%>
+      <div class="flex absolute bottom-0 left-0 w-full h-20 bg-lime-500 hover:bg-blue-700 text-white justify-center font-bold py-2 px-4 focus:outline-none focus:shadow-outline" >
+        <%= f.submit "Save", class:"self-center text-2xl"%>
+      </div>
       <%end%>
   </div>
 </div>
