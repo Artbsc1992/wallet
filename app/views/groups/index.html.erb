@@ -1,0 +1,13 @@
+<%= render 'shared/home_nav' %>
+<% if @groups == nil %>
+  <h2>You have no groups yet</h2>
+<% else %>
+  <% @groups.each do |group| %>
+    <%= link_to group_path(group) do %>
+      <%= render 'shared/groups', group: group %>
+    <% end %>
+  <% end %>
+<% end %>
+<div class="flex absolute bottom-0 left-0 w-full h-20 bg-lime-500 hover:bg-blue-700 text-white justify-center font-bold py-2 px-4 focus:outline-none focus:shadow-outline" >
+<%= link_to "Create Group", new_group_path, class: "self-center text-2xl" %>
+</div>
