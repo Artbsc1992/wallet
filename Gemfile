@@ -76,6 +76,7 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rails-controller-testing'
 end
 
 gem 'cancancan', '~> 3.4'

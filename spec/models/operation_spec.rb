@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Operation, type: :model do
-  let(:user) { User.create(name: 'User') }
+  let(:user) { User.create(name: 'User', email: 'ex@email.com', password: '123456') }
   let(:operation) { Operation.create(name: 'Operation', amount: 100, user:) }
   describe 'validations' do
     it 'is valid with valid attributes' do
@@ -17,3 +17,4 @@ RSpec.describe Operation, type: :model do
     end
   end
 end
+
