@@ -1,9 +1,4 @@
-<div class= "w-full h-24 flex justify-around bg-blue-500">
-  <%=link_to :back do%>
-    <i class="fa-solid fa-arrow-left-long"></i>Cancel
-  <%end%>
-  <h2 class="text-white text-2xl self-center">Login</h2>
-</div>
+<%= render 'shared/login_nav' %>
 <div class="flex flex-col">
   <div class="w-full">
     <%= form_for resource, as: resource_name, url: session_path(resource_name), html:{class: "bg-gray-200 w-screen"} do |f| %>
