@@ -2,6 +2,13 @@
 
 > The Wallet app will be a classic example of a budget and expenses website. I had create a fully functional digital wallet that will show the list of groups and operations that you have.
 
+## Video presentation
+[video](https://www.loom.com/share/1eded00cafcf4442a9e91433420101f9)
+
+## Live Demo
+
+[Demo](https://arturo-wallet.herokuapp.com/)
+
 ## Built With
 
 * Ruby version
