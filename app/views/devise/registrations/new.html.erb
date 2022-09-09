@@ -1,34 +1,32 @@
-<h2>Sign up</h2>
+<%= render 'shared/signin_nav' %>
+<div class="flex flex-col">
+  <%= form_for resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false}, html:{class: "bg-gray-200 w-screen"} do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false} do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="mb-1">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "mt-2 shadow border-none appearance-none w-full py-5 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Full Name" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
+    <div class="mb-1">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "mt-1 shadow border-none appearance-none w-full py-5 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Email" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="mb-1">
+      <% if @minimum_password_length %>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password", class:"mt-1 shadow border-none appearance-none w-full py-5 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Password" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "mt-1 shadow border-none appearance-none w-full py-5 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", placeholder: "Confirm Password" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="absolute top-6 right-1">
+        <%= f.submit "Next", class:"text-2xl text-white py-2 px-4 focus:outline-none focus:shadow-outline"%>
+      </div>
+  <% end %>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div class="flex flex-col justify-center mt-5">
+  <%= render "devise/shared/links" %>
+</div>

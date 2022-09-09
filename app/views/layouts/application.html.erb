@@ -12,11 +12,8 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="h-screen">
-    <% if user_signed_in? %>
-      <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false } %>
-    <% end %>
-    <p class="notice"><%= notice %></p>
+  <body class="h-screen bg-gray-200">
+    <p class="notice absolute text-white"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
