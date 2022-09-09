@@ -67,7 +67,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to all our code reviewers and partners at Microverse.
+To [Gregoire Vella](https://www.behance.net/gregoirevella) who create the template that I used trough [creative common licenses](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## 📝 License
 
